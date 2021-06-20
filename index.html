@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <model-viewer src="./sunflower.glb" poster="./sunflower.png" shadow-intensity="1" ar
+    <model-viewer src="./assets/models/sunflower.glb" poster="./assets/images/sunflower.png" shadow-intensity="1" ar
         ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
 
         <button slot="ar-button" id="ar-button">
@@ -18,7 +18,7 @@
         </button>
 
         <div id="ar-prompt">
-            <img src="./hand.png">
+            <img src="./assets/images/hand.png">
         </div>
 
         <button id="ar-failure">
@@ -28,19 +28,19 @@
         <div class="slider">
             <div class="slides">
                 <button class="slide selected" onclick="switchSrc(this, 'sunflower')"
-                    style="background-image: url('./sunflower.png');">
+                    style="background-image: url('./assets/images/sunflower.png');">
 
                 </button><button class="slide" onclick="switchSrc(this, 'fox')"
-                    style="background-image: url('./fox.png');">
+                    style="background-image: url('./assets/images/fox.png');">
 
                 </button><button class="slide" onclick="switchSrc(this, 'earth')"
-                    style="background-image: url('./earth.png');">
+                    style="background-image: url('./assets/images/earth.png');">
 
                 </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')"
-                    style="background-image: url('./abc.png');">
+                    style="background-image: url('./assets/images/abc.png');">
 
                 </button><button class="slide" onclick="switchSrc(this, 'Canoe')"
-                    style="background-image: url('./abc.png');">
+                    style="background-image: url('./assets/images/abc.png');">
                 </button>
             </div>
         </div>
@@ -57,9 +57,9 @@
         const modelViewer = document.querySelector("model-viewer");
 
         window.switchSrc = (element, name) => {
-            const base = "./" + name;
-            modelViewer.src = base + '.glb';
-            modelViewer.poster = base + '.png';
+            const base = "./assets/";
+            modelViewer.src = base + "models/" + name + '.glb';
+            modelViewer.poster = base + "images/" + name + '.png';
             const slides = document.querySelectorAll(".slide");
             slides.forEach((element) => { element.classList.remove("selected"); });
             element.classList.add("selected");
