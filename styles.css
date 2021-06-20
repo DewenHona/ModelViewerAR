@@ -98,7 +98,7 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
   text-align: center;
   overflow: hidden;
   position: absolute;
-  bottom: 16px;
+  bottom: 5%;
 }
 
 .slides {
@@ -135,3 +135,39 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
 .slide:focus-visible {
   outline: 1px solid #4285f4;
 }
+
+/* 
+Anotations Code
+
+ano-button {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: blue;
+  box-sizing: border-box;
+}
+
+ano-button[slot="hotspot-hand"] {
+  --min-hotspot-opacity: 0;
+  background-color: red;
+}
+
+ano-button[slot="hotspot-foot"]:not([data-visible]) {
+  background-color: transparent;
+  border: 3px solid blue;
+}
+
+#annotation {
+  background-color: #888888;
+  position: absolute;
+  transform: translate(10px, 10px);
+  border-radius: 10px;
+  padding: 10px;
+}
+This keeps child nodes hidden while the element loads 
+:not(:defined) > * {
+  display: none;
+}
+*/
