@@ -32,6 +32,11 @@ model-viewer {
   border-radius: 18px;
   border: 1px solid #dadce0;
 }
+/* @media only screen and (max-width: 600px) {
+  #ar-button {
+    color: #ff0606;
+  }
+} */
 
 #ar-button:active {
   background-color: #e8eaed;
@@ -136,7 +141,10 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
   outline: 1px solid #4285f4;
 }
 
-/* 
+/* .sound-btn {
+  background-position: right;
+} 
+ 
 Anotations Code
 
 ano-button {

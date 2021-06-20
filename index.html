@@ -4,9 +4,9 @@
 
     <title>modelViewer</title>
 
-    <!-- TEST -->
-
+    <!-- CUSTOM CSS and JS -->
     <link rel="stylesheet" href="./styles.css">
+
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 
 </head>
@@ -15,9 +15,7 @@
     <model-viewer src="./assets/models/sunflower.glb" poster="./assets/images/sunflower.png" shadow-intensity="1" ar
         ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
 
-        <button slot="ar-button" id="ar-button">
-            View in your space
-        </button>
+        <button slot="ar-button" id="ar-button">AR</button>
 
         <div id="ar-prompt">
             <img src="./assets/images/hand.png">
@@ -31,24 +29,43 @@
             <div class="slides">
                 <button class="slide selected" onclick="switchSrc(this, 'sunflower')"
                     style="background-image: url('./assets/images/sunflower.png');">
+                </button>
 
-                </button><button class="slide" onclick="switchSrc(this, 'fox')"
-                    style="background-image: url('./assets/images/fox.png');">
+                <div id="select-bg">
+                    <button class="slide" onclick="switchSrc(this, 'fox')"
+                        style="background-image: url('./assets/images/fox.png');">
+                        <!-- button audio -->
+                        <audio id="sound1" src="/assets/audio/fox.wav" preload="auto"></audio>
+                        <button id="sounds" onclick="document.getElementById('sound1').play();">Play
+                            it</button>
+                        <!-- button audio -->
+                    </button>
 
-                </button><button class="slide" onclick="switchSrc(this, 'earth')"
+                </div>
+
+                <button class="slide" onclick="switchSrc(this, 'earth')"
                     style="background-image: url('./assets/images/earth.png');">
+                </button>
 
-                </button><button class="slide" onclick="switchSrc(this, 'ToyTrain')"
+                <button class="slide" onclick="switchSrc(this, 'ToyTrain')"
                     style="background-image: url('./assets/images/abc.png');">
+                </button>
 
-                </button><button class="slide" onclick="switchSrc(this, 'Canoe')"
+                <button class="slide" onclick="switchSrc(this, 'Canoe')"
                     style="background-image: url('./assets/images/abc.png');">
                 </button>
             </div>
         </div>
 
+        <!-- button for audio -->
+
+        </div id="Sound">
 
 
+
+
+
+        </div>
 
     </model-viewer>
 
@@ -56,12 +73,6 @@
 
 
 
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
-    </script>
-
-    <!-- Loads <model-viewer> for old browsers like IE11: -->
-    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
-    </script>
 
 
     <script type="module">
@@ -80,6 +91,14 @@
             // Keep slider interactions from affecting the XR scene.
             ev.preventDefault();
         });
+    </script>
+
+
+    <!-- MISC -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
     </script>
 
 
