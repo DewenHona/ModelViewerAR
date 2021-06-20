@@ -15,19 +15,19 @@ model-viewer {
 #ar-button {
   background-image: url(./assets/images/arcube.png);
   background-repeat: no-repeat;
-  background-size: 20px 20px;
-  background-position: 12px 50%;
+  background-size: 2em 2em;
+  background-position: 0.1em 50%;
   background-color: #fff;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  bottom: 132px;
-  padding: 0px 16px 0px 40px;
+  bottom: 12%;
+  padding: 0px 1em 0px 2.5em;
   font-family: Roboto Regular, Helvetica Neue, sans-serif;
-  font-size: 14px;
+  font-size: 2em;
   color: #4285f4;
-  height: 36px;
+  height: 3em;
   line-height: 36px;
   border-radius: 18px;
   border: 1px solid #dadce0;
@@ -98,7 +98,7 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
   text-align: center;
   overflow: hidden;
   position: absolute;
-  bottom: 16px;
+  bottom: 5%;
 }
 
 .slides {
