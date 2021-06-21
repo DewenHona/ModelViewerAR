@@ -135,13 +135,14 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
 .slide {
   scroll-snap-align: start;
   flex-shrink: 0;
-  width: 10em;
-  height: 10em;
+  width: 160px;
+  height: 160px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fff;
-  margin-right: 1em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
   border-radius: 1em;
   border: none;
   display: flex;
