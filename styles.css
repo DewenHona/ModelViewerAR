@@ -234,3 +234,7 @@ ano-button[slot="hotspot-foot"]:not([data-visible]) {
 /*
 Anotations End
 */
+
+.slide {
+  background-color: #212121;
+}
