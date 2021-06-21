@@ -52,6 +52,11 @@ model-viewer {
   border-radius: 18px;
   border: 1px solid #dadce0;
 }
+/* @media only screen and (max-width: 600px) {
+  #ar-button {
+    color: #1eff00;
+  }
+} */
 
 #ar-button:active {
   background-color: #e8eaed;
@@ -97,13 +102,19 @@ model-viewer[ar-status="session-started"] > #ar-prompt {
   display: block;
 }
 
-mode-viewer {
+model-div {
   background-color: #f2a838;
+  border-color: #212121;
+  border-style: solid;
+  border-radius: 10px 10px;
 }
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
 
+model-viewer {
+  background-color: #f2a838;
+}
 model-viewer > #ar-failure {
   position: absolute;
   left: 50%;

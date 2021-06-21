@@ -1,7 +1,6 @@
 <html>
 
 <head>
-
     <title>modelViewer</title>
 
     <!-- CUSTOM CSS and JS -->
@@ -12,67 +11,66 @@
 </head>
 
 <body>
-    <model-viewer src="./assets/models/sunflower.glb" poster="./assets/images/sunflower.png" shadow-intensity="1" ar
-        ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel">
+    <div id="model-div">
+        <model-viewer src="./assets/models/sunflower.glb" poster="./assets/images/sunflower.png" shadow-intensity="1" ar
+            ar-modes="webxr scene-viewer quick-look" camera-controls skybox-image="./assets/images/skyboxforest.hdr"
+            alt=" A 3D model carousel">
 
-        <button slot="ar-button" id="ar-button">&nbsp;AR</button>
+            <button slot="ar-button" id="ar-button">&nbsp;AR</button>
 
-        <div id="ar-prompt">
-            <img src="./assets/images/hand.png">
-        </div>
-
-        <button id="ar-failure">
-            AR is not tracking!
-        </button>
-
-        <!-- button audio-start -->
-        <audio loop id="sound-aud" src="/assets/audio/sunflower.wav" preload="auto"></audio>
-        <button id="sound-btn" onclick="document.getElementById('sound-aud').play();">Audio</button>
-
-
-        <!-- button audio-end -->
-
-        <!-- interactions-Start -->
-
-        <div id="interactions">
-
-            <div id="story">
-                <!-- Slider-start -->
-                <div class="slider">
-                    <div class="slides">
-                        <button class="slide selected" onclick="switchSrc(this, 'sunflower')"
-                            style="background-image: url('./assets/images/sunflower.png');">
-                        </button>
-
-                        <button class="slide" onclick="switchSrc(this, 'fox')"
-                            style="background-image: url('./assets/images/fox.png');">
-
-                        </button>
-
-                        <button class="slide" onclick="switchSrc(this, 'earth')"
-                            style="background-image: url('./assets/images/earth.png');">
-                        </button>
-
-                        <button class="slide" onclick="switchSrc(this, 'RobotExpressive')"
-                            style="background-image: url('./assets/images/abc.png');">
-                        </button>
-
-                        <button class="slide" onclick="switchSrc(this, 'DanceRobot')"
-                            style="background-image: url('./assets/images/abc.png');">
-                        </button>
-
-                        <button class="slide" onclick="switchSrc(this, 'Peacock')"
-                            style="background-image: url('./assets/images/abc.png');">
-                        </button>
-                    </div>
-                </div>
-                <!-- Slider-end -->
-
+            <div id="ar-prompt">
+                <img src="./assets/images/hand.png">
             </div>
-            <!-- interactions-end -->
 
-    </model-viewer>
+            <button id="ar-failure">
+                AR is not tracking!
+            </button>
 
+            <!-- button audio-start -->
+            <audio loop id="sound-aud" src="/assets/audio/sunflower.wav" preload="auto"></audio>
+            <button id="sound-btn" onclick="document.getElementById('sound-aud').play();">Audio</button>
+            <!-- button audio-end -->
+
+            <!-- interactions-Start -->
+            <div id="interactions">
+
+                <div id="story">
+                    <!-- Slider-start -->
+                    <div class="slider">
+                        <div class="slides">
+                            <button class="slide selected" onclick="switchSrc(this, 'sunflower')"
+                                style="background-image: url('./assets/images/sunflower.png');">
+                            </button>
+
+                            <button class="slide" onclick="switchSrc(this, 'fox')"
+                                style="background-image: url('./assets/images/fox.png');">
+
+                            </button>
+
+                            <button class="slide" onclick="switchSrc(this, 'earth')"
+                                style="background-image: url('./assets/images/earth.png');">
+                            </button>
+
+                            <button class="slide" onclick="switchSrc(this, 'RobotExpressive')"
+                                style="background-image: url('./assets/images/RobotExpressive.png');">
+                            </button>
+
+                            <button class="slide" onclick="switchSrc(this, 'DanceRobot')"
+                                style="background-image: url('./assets/images/DanceRobot.png');">
+                            </button>
+
+                            <button class="slide" onclick="switchSrc(this, 'Peacock')"
+                                style="background-image: url('./assets/images/Peacock.png');">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Slider-end -->
+
+                </div>
+                <!-- interactions-end -->
+
+        </model-viewer>
+    </div>
 
     <script type="module">
         const modelViewer = document.querySelector("model-viewer");
