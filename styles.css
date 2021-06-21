@@ -3,6 +3,9 @@
   display: none;
 } */
 
+body {
+  font-family: Roboto Mono;
+}
 model-viewer {
   background-color: #eee;
   overflow-x: hidden;
@@ -112,7 +115,7 @@ model-viewer > #ar-prompt > img {
 }
 
 model-viewer {
-  background-color: #d5f8fd;
+  background-color: #dddd;
 }
 model-viewer > #ar-failure {
   position: absolute;
@@ -179,11 +182,25 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
   position: absolute;
   bottom: 5%;
 }
+
+#story-card {
+  color: #212121;
+  background-color: #dadce0;
+  margin: 5% 5%;
+  padding: 5% 5%;
+  display: none;
+}
+
+#robot-button {
+  background-color: aquamarine;
+}
+
+#earth-button {
+  background-color: rgb(78, 165, 247);
+}
 /*
-
- 
 Anotations Code
-
+*/
 ano-button {
   display: block;
   width: 20px;
@@ -211,8 +228,9 @@ ano-button[slot="hotspot-foot"]:not([data-visible]) {
   border-radius: 10px;
   padding: 10px;
 }
-This keeps child nodes hidden while the element loads 
 :not(:defined) > * {
   display: none;
 }
+/*
+Anotations End
 */

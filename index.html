@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>modelViewer</title>
+    <title>HeatIt!</title>
 
     <!-- CUSTOM CSS and JS -->
     <link rel="stylesheet" href="./styles.css">
@@ -11,9 +11,24 @@
 </head>
 
 <body>
-    <div id="model-div">
-        <model-viewer src="./assets/models/sunflower.glb" poster="./assets/images/sunflower.png" shadow-intensity="1" ar
-            ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel">
+
+
+
+
+    <model-viewer src="./assets/models/fox.glb" poster="./assets/images/fox.png" shadow-intensity="1" ar
+        ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel" environment-image="neutral">
+
+        <div id="story-card">
+            Story
+
+        </div>
+
+        <!-- Annotations for ASTRONAUT-->
+        <button class="anno-btn" slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1">Helmet</button>
+        <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">Hand
+            <button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23"
+                data-visibility-attribute="visible">Legs</button>
+            <!-- Annotations-end -->
 
             <button slot="ar-button" id="ar-button">&nbsp;AR</button>
 
@@ -37,30 +52,29 @@
                     <!-- Slider-start -->
                     <div class="slider">
                         <div class="slides">
-                            <button class="slide selected" onclick="switchSrc(this, 'sunflower')"
-                                style="background-image: url('./assets/images/sunflower.png');">
-                            </button>
 
+                            <h1>Fox</h1>
                             <button class="slide" onclick="switchSrc(this, 'fox')"
                                 style="background-image: url('./assets/images/fox.png');">
-
                             </button>
 
-                            <button class="slide" onclick="switchSrc(this, 'earth')"
+                            <button id="earth-button" class="slide" onclick="switchSrc(this, 'earth')"
                                 style="background-image: url('./assets/images/earth.png');">
                             </button>
 
-                            <button class="slide" onclick="switchSrc(this, 'RobotExpressive')"
+                            <button id="robot-button" class="slide" onclick="switchSrc(this, 'RobotExpressive')"
                                 style="background-image: url('./assets/images/RobotExpressive.png');">
                             </button>
 
-                            <button class="slide" onclick="switchSrc(this, 'DanceRobot')"
-                                style="background-image: url('./assets/images/DanceRobot.png');">
-                            </button>
 
                             <button class="slide" onclick="switchSrc(this, 'Peacock')"
                                 style="background-image: url('./assets/images/Peacock.png');">
                             </button>
+
+                            <button class="slide" onclick="switchSrc(this, 'Astronaut')"
+                                style="background-image: url('./assets/images/astronaut.png');">
+                            </button>
+
                         </div>
                     </div>
                     <!-- Slider-end -->
@@ -68,8 +82,7 @@
                 </div>
                 <!-- interactions-end -->
 
-        </model-viewer>
-    </div>
+    </model-viewer>
 
     <script type="module">
         const modelViewer = document.querySelector("model-viewer");
@@ -82,11 +95,11 @@
             slides.forEach((element) => { element.classList.remove("selected"); });
             element.classList.add("selected");
 
+
             //add sound src dynamically
             const path = "./assets/audio/";
             var audiofile = document.getElementById('sound-aud').src = path + name + '.wav';
 
-            //src="/assets/audio/fox.wav"
 
             // ANIMATION 
             if (name == "RobotExpressive") {
