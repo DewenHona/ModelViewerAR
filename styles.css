@@ -15,8 +15,8 @@ model-viewer {
 #ar-button {
   background-image: url(./assets/images/arcube.png);
   background-repeat: no-repeat;
-  background-size: 1.75em 1.75em;
-  background-position: 0.4em 50%;
+  background-size: 3vh 3vh;
+  background-position: 1vh 50%;
   background-color: #fff;
   position: absolute;
   left: 38%;
@@ -35,8 +35,8 @@ model-viewer {
 #sound-btn {
   background-image: url(./assets/images/sound.png);
   background-repeat: no-repeat;
-  background-size: 1.75em 1.75em;
-  background-position: 0.1em 50%;
+  background-size: 3vh 3vh;
+  background-position: 1vh 50%;
   background-color: #fff;
   position: absolute;
   left: 62%;
@@ -112,7 +112,7 @@ model-viewer > #ar-prompt > img {
 }
 
 model-viewer {
-  background-color: #f2a838;
+  background-color: #d5f8fd;
 }
 model-viewer > #ar-failure {
   position: absolute;
