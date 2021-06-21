@@ -13,9 +13,9 @@
 
 <body>
     <model-viewer src="./assets/models/sunflower.glb" poster="./assets/images/sunflower.png" shadow-intensity="1" ar
-        ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+        ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel">
 
-
+        <button slot="ar-button" id="ar-button">&nbsp;AR</button>
 
         <div id="ar-prompt">
             <img src="./assets/images/hand.png">
@@ -25,20 +25,16 @@
             AR is not tracking!
         </button>
 
+        <!-- button audio-start -->
+        <audio loop id="sound-aud" src="/assets/audio/sunflower.wav" preload="auto"></audio>
+        <button id="sound-btn" onclick="document.getElementById('sound-aud').play();">Audio</button>
+
+
+        <!-- button audio-end -->
+
         <!-- interactions-Start -->
 
         <div id="interactions">
-
-
-
-            <!-- ArButton-start -->
-            <button slot="ar-button" id="ar-button">AR</button>
-            <!-- ArButton-end -->
-
-            <!-- button audio-start -->
-            <audio id="sound-aud" src="/assets/audio/sunflower.wav" preload="auto"></audio>
-            <button id="sound-btn" onclick="document.getElementById('sound-aud').play();">👂</button>
-            <!-- button audio-end -->
 
             <div id="story">
                 <!-- Slider-start -->
@@ -54,17 +50,15 @@
 
                         </button>
 
-
-
                         <button class="slide" onclick="switchSrc(this, 'earth')"
                             style="background-image: url('./assets/images/earth.png');">
                         </button>
 
-                        <button class="slide" onclick="switchSrc(this, 'ToyTrain')"
+                        <button class="slide" onclick="switchSrc(this, 'RobotExpressive')"
                             style="background-image: url('./assets/images/abc.png');">
                         </button>
 
-                        <button class="slide" onclick="switchSrc(this, 'Canoe')"
+                        <button class="slide" onclick="switchSrc(this, 'DanceRobot')"
                             style="background-image: url('./assets/images/abc.png');">
                         </button>
                     </div>
@@ -90,14 +84,29 @@
 
             //add sound src dynamically
             const path = "./assets/audio/";
-            document.getElementById('sound-aud').src = path + name + '.wav';
+            var audiofile = document.getElementById('sound-aud').src = path + name + '.wav';
+
             //src="/assets/audio/fox.wav"
+
+            // ANIMATION 
+            if (name == "RobotExpressive") {
+                modelViewer.setAttribute("animation-name", "Running");
+                modelViewer.autoplay = true;
+            }
+            else {
+                modelViewer.setAttribute("animation-name", "false");
+                modelViewer.autoplay = false;
+            }
         };
 
         document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
             // Keep slider interactions from affecting the XR scene.
             ev.preventDefault();
         });
+
+
+
+
     </script>
 
     <!-- MISC -->

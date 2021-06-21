@@ -1,7 +1,7 @@
 /* This keeps child nodes hidden while the element loads */
-:not(:defined) > * {
+/* :not(:defined) > * {
   display: none;
-}
+} */
 
 model-viewer {
   background-color: #eee;
@@ -12,31 +12,46 @@ model-viewer {
   min-width: 100%;
 }
 
-/* #ar-button {
+#ar-button {
   background-image: url(./assets/images/arcube.png);
   background-repeat: no-repeat;
-  background-size: 2em 2em;
+  background-size: 1.75em 1.75em;
+  background-position: 0.4em 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 38%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  bottom: 18%;
+  padding: 0px 1em 0px 2em;
+  font-family: Roboto Regular, Helvetica Neue, sans-serif;
+  font-size: 2.5em;
+  color: #4285f4;
+  height: 3em;
+  line-height: 1em;
+  border-radius: 18px;
+  border: 1px solid #dadce0;
+}
+#sound-btn {
+  background-image: url(./assets/images/sound.png);
+  background-repeat: no-repeat;
+  background-size: 1.75em 1.75em;
   background-position: 0.1em 50%;
   background-color: #fff;
   position: absolute;
-  left: 50%;
+  left: 62%;
   transform: translateX(-50%);
   white-space: nowrap;
-  bottom: 12%;
-  padding: 0px 1em 0px 2.5em;
+  bottom: 18%;
+  padding: 0px 1em 0px 2em;
   font-family: Roboto Regular, Helvetica Neue, sans-serif;
-  font-size: 2em;
+  font-size: 2.5em;
   color: #4285f4;
   height: 3em;
-  line-height: 36px;
+  line-height: 1em;
   border-radius: 18px;
   border: 1px solid #dadce0;
-} */
-/* @media only screen and (max-width: 600px) {
-  #ar-button {
-    color: #ff0606;
-  }
-} */
+}
 
 #ar-button:active {
   background-color: #e8eaed;
@@ -82,10 +97,9 @@ model-viewer[ar-status="session-started"] > #ar-prompt {
   display: block;
 }
 
-model-viewer {
-  background-color: aquamarine;
+mode-viewer {
+  background-color: #f2a838;
 }
-
 model-viewer > #ar-prompt > img {
   animation: circle 4s linear infinite;
 }
@@ -102,13 +116,13 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
   display: block;
 }
 
-/* .slider {
+.slider {
   width: 100%;
   text-align: center;
   overflow: hidden;
-  position: absolute;
-  bottom: 5%;
-} */
+  /* position: absolute; */
+  bottom: 16px;
+}
 
 .slides {
   display: flex;
@@ -121,14 +135,14 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
 .slide {
   scroll-snap-align: start;
   flex-shrink: 0;
-  width: 100px;
-  height: 100px;
+  width: 15em;
+  height: 15em;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fff;
-  margin-right: 10px;
-  border-radius: 10px;
+  margin-right: 1em;
+  border-radius: 1em;
   border: none;
   display: flex;
 }
@@ -155,6 +169,8 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
   bottom: 5%;
 }
 /*
+
+ 
 Anotations Code
 
 ano-button {

@@ -1,0 +1,7 @@
+______________________________( categories )__________________________________
+                                /       \              \            \
+                              Animals  Instruments     Places       Objects
+                              /             \            \
+                             Tger           Sitar       
+                             Peacock         Veena   
+                            /                  \
