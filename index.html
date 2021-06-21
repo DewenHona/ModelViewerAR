@@ -15,7 +15,7 @@
     <model-viewer src="./assets/models/sunflower.glb" poster="./assets/images/sunflower.png" shadow-intensity="1" ar
         ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
 
-        <button slot="ar-button" id="ar-button">AR</button>
+
 
         <div id="ar-prompt">
             <img src="./assets/images/hand.png">
@@ -25,54 +25,56 @@
             AR is not tracking!
         </button>
 
-        <div class="slider">
-            <div class="slides">
-                <button class="slide selected" onclick="switchSrc(this, 'sunflower')"
-                    style="background-image: url('./assets/images/sunflower.png');">
-                </button>
+        <!-- interactions-Start -->
 
-                <div id="select-bg">
-                    <button class="slide" onclick="switchSrc(this, 'fox')"
-                        style="background-image: url('./assets/images/fox.png');">
-                        <!-- button audio -->
-                        <audio id="sound1" src="/assets/audio/fox.wav" preload="auto"></audio>
-                        <button id="sounds" onclick="document.getElementById('sound1').play();">Play
-                            it</button>
-                        <!-- button audio -->
-                    </button>
+        <div id="interactions">
 
+
+
+            <!-- ArButton-start -->
+            <button slot="ar-button" id="ar-button">AR</button>
+            <!-- ArButton-end -->
+
+            <!-- button audio-start -->
+            <audio id="sound-aud" src="/assets/audio/sunflower.wav" preload="auto"></audio>
+            <button id="sound-btn" onclick="document.getElementById('sound-aud').play();">👂</button>
+            <!-- button audio-end -->
+
+            <div id="story">
+                <!-- Slider-start -->
+                <div class="slider">
+                    <div class="slides">
+                        <button class="slide selected" onclick="switchSrc(this, 'sunflower')"
+                            style="background-image: url('./assets/images/sunflower.png');">
+                        </button>
+
+
+                        <button class="slide" onclick="switchSrc(this, 'fox')"
+                            style="background-image: url('./assets/images/fox.png');">
+
+                        </button>
+
+
+
+                        <button class="slide" onclick="switchSrc(this, 'earth')"
+                            style="background-image: url('./assets/images/earth.png');">
+                        </button>
+
+                        <button class="slide" onclick="switchSrc(this, 'ToyTrain')"
+                            style="background-image: url('./assets/images/abc.png');">
+                        </button>
+
+                        <button class="slide" onclick="switchSrc(this, 'Canoe')"
+                            style="background-image: url('./assets/images/abc.png');">
+                        </button>
+                    </div>
                 </div>
+                <!-- Slider-end -->
 
-                <button class="slide" onclick="switchSrc(this, 'earth')"
-                    style="background-image: url('./assets/images/earth.png');">
-                </button>
-
-                <button class="slide" onclick="switchSrc(this, 'ToyTrain')"
-                    style="background-image: url('./assets/images/abc.png');">
-                </button>
-
-                <button class="slide" onclick="switchSrc(this, 'Canoe')"
-                    style="background-image: url('./assets/images/abc.png');">
-                </button>
             </div>
-        </div>
-
-        <!-- button for audio -->
-
-        </div id="Sound">
-
-
-
-
-
-        </div>
+            <!-- interactions-end -->
 
     </model-viewer>
-
-
-
-
-
 
 
     <script type="module">
@@ -85,6 +87,11 @@
             const slides = document.querySelectorAll(".slide");
             slides.forEach((element) => { element.classList.remove("selected"); });
             element.classList.add("selected");
+
+            //add sound src dynamically
+            const path = "./assets/audio/";
+            document.getElementById('sound-aud').src = path + name + '.wav';
+            //src="/assets/audio/fox.wav"
         };
 
         document.querySelector(".slider").addEventListener('beforexrselect', (ev) => {
@@ -92,7 +99,6 @@
             ev.preventDefault();
         });
     </script>
-
 
     <!-- MISC -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
