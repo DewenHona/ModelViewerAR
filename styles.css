@@ -241,3 +241,11 @@ Anotations End
 .music {
   background-color: #7ed957;
 }
+
+#objname {
+  position: absolute;
+  margin-top: 10%;
+  margin-left: 10%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+}
