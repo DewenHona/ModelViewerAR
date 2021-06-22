@@ -60,15 +60,15 @@ hotspots
         obj2
               datapoint1
               datanormal1         
-
-              datapoint2
-              datanormal2    
-
-              datapoint3
-              datapoint3
         .
         .
         .
         objn
+            .
+            .
+            .
             datapointn
+            .
+            .
+            .
             datanormaln      
