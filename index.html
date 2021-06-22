@@ -30,38 +30,25 @@
             Story
         </div>
 
-        <!-- 
-            create buttons -> no of data points = no of hotspots
-            parse dataPostion
-            parse dataNormal
-            set name of Element as hotspot name
-
-         -->
 
 
-        da<button class="anno-btn" slot="hotspot-visor" data-position="" data-normal=""></button>
+
+        <button class="anno-btn" slot="hotspot-visor" data-position="" data-normal=""></button>
 
         <script>
-            var annos = {
-                "Annotations": [
-                    {
-                        "Object": "Astronaut",
-                        "dataPosition": "0 1.75 0.35",
-                        "dataNormal": "0 0 1",
-                        "pointName": "Helmet"
-                    },
-                    {
-                        "Object": "Tiger",
-                        "dataPosition": "0.05 0.82 -0.65",
-                        "dataNormal": "0.63 0.16 -0.75",
-                        "pointName": "Tail"
-                    }
-                ]
+
+            function switchAnno() {
+                const annoButton = document.createElement("button");
+                annoButton.classList.add("anno-btn");
+                for (i = 1; 1 <= anoo.lenght(); i++) {
+
+                }
+
+
+
+
+
             }
-
-            document.getElementsByClassName("anno-btn") //set data to this class buton
-
-
         </script>
 
 
@@ -91,7 +78,7 @@
                 <div class="slider">
                     <div class="slides">
 
-                        <!-- NEW MODELS -->
+
 
                         <button class="slide music"
                             onclick="switchSrc(this, 'sitar');changecontext('Sitar','Musical  Instrument')"
@@ -163,6 +150,44 @@
                             onclick="switchSrc(this, 'Astronaut');changecontext('Astronaut','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/astronaut.png');">
                         </button>
+
+                        <!-- NEW MODELS -->
+
+                        <button class="slide"
+                            onclick="switchSrc(this, 'bicycle');changecontext('bicycle','Thing⠀⠀⠀⠀⠀⠀⠀')"
+                            style="background-image: url('./assets/images/bicycle.png');">
+                        </button>
+
+                        <button class="slide"
+                            onclick="switchSrc(this, 'butterfly');changecontext('butterfly','Thing⠀⠀⠀⠀⠀⠀⠀')"
+                            style="background-image: url('./assets/images/butterfly.png');">
+                        </button>
+
+                        <button class="slide" onclick="switchSrc(this, 'robin');changecontext('robin','Thing⠀⠀⠀⠀⠀⠀⠀')"
+                            style="background-image: url('./assets/images/robin.png');">
+                        </button>
+
+                        <button class="slide"
+                            onclick="switchSrc(this, 'tractor');changecontext('tractor','Thing⠀⠀⠀⠀⠀⠀⠀')"
+                            style="background-image: url('./assets/images/tractor.png');">
+                        </button>
+
+                        <button class="slide"
+                            onclick="switchSrc(this, 'chicken');changecontext('chicken','Thing⠀⠀⠀⠀⠀⠀⠀')"
+                            style="background-image: url('./assets/images/chicken.png');">
+                        </button>
+
+                        <button class="slide"
+                            onclick="switchSrc(this, 'elephant');changecontext('elephant','Thing⠀⠀⠀⠀⠀⠀⠀')"
+                            style="background-image: url('./assets/images/elephant.png');">
+                        </button>
+
+                        <button class="slide"
+                            onclick="switchSrc(this, 'helicopter');changecontext('helicopter','Thing⠀⠀⠀⠀⠀⠀⠀')"
+                            style="background-image: url('./assets/images/helicopter.png');">
+                        </button>
+
+
 
                     </div>
                 </div>
