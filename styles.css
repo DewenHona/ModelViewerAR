@@ -10,7 +10,7 @@ model-viewer {
   background-color: rgb(15, 0, 0);
   overflow-x: hidden;
   --poster-color: #eee;
-
+  
   min-height: 100%;
   min-width: 100%;
 }
@@ -115,7 +115,7 @@ model-viewer > #ar-prompt > img {
 }
 
 model-viewer {
-  background-color: #dddd;
+  background-color: #cbefbb;
 }
 model-viewer > #ar-failure {
   position: absolute;
@@ -242,10 +242,18 @@ Anotations End
   background-color: #7ed957;
 }
 
-#objname {
+#objdesc {
   position: absolute;
   margin-top: 10%;
   margin-left: 10%;
   font-family: "Open Sans", sans-serif;
-  font-size: 50px;
+  /* font-size: 50px; */
+}
+#objtype{
+  font-size: 40px;
+  color: #313131;
+}
+#objname{
+font-size: 50px;
+color: black;
 }

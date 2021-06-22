@@ -17,9 +17,13 @@
 
 <body>
 
-    <model-viewer src="./assets/models/bell.glb" poster="./assets/images/bell.png" shadow-intensity="1" ar
+    <model-viewer id="mv" src="./assets/models/bell.glb" poster="./assets/images/bell.png" shadow-intensity="1" ar
         ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel" environment-image="neutral">
-        <h1 id="objname">Bell</h1>
+        <div id="objdesc">
+            <h1 id="objtype">Musical Instrument</h1>
+            <h1 id="objname">Bell</h1>
+            
+        </div>
         <div id="story-card">
             Story
         </div>
@@ -60,19 +64,19 @@
                 
                             <!-- NEW MODELS -->
                 
-                            <button class="slide music" onclick="switchSrc(this, 'bell');changecontext('Bell','Place')"
+                            <button class="slide music" onclick="switchSrc(this, 'bell');changecontext('Bell','Musical  Instrument')"
                                 style="background-image: url('./assets/images/bell.png');">
                             </button>
 
-                            <button id="robot-button" class="slide music" onclick="switchSrc(this, 'flute');changecontext('Flute','Place')"
+                            <button id="robot-button" class="slide music" onclick="switchSrc(this, 'flute');changecontext('Flute','Musical  Instrument')"
                                 style="background-image: url('./assets/images/flute.png');">
                             </button>
                 
-                            <button id="earth-button" class="slide objects" onclick="switchSrc(this, 'bus');changecontext('Bus','Place');"
+                            <button id="earth-button" class="slide objects" onclick="switchSrc(this, 'bus');changecontext('Bus','Vehicle');"
                                 style="background-image: url('./assets/images/bus.png');">
                             </button>
                 
-                            <button id="robot-button" class="slide objects" onclick="switchSrc(this, 'car');changecontext('Car','Place')"
+                            <button id="robot-button" class="slide objects" onclick="switchSrc(this, 'car');changecontext('Car','Vehicle')"
                                 style="background-image: url('./assets/images/car.png');">
                             </button>
                 
@@ -81,47 +85,47 @@
                                 style="background-image: url('./assets/images/fox.png');">
                             </button>
 
-                            <button class="slide animals" onclick="switchSrc(this, 'cat');changecontext('Cat','Place')"
+                            <button class="slide animals" onclick="switchSrc(this, 'cat');changecontext('Cat','Animal')"
                                 style="background-image: url('./assets/images/cat.png');">
                             </button>
                 
-                            <button class="slide animals" onclick="switchSrc(this, 'cow');changecontext('Cow','Place')"
+                            <button class="slide animals" onclick="switchSrc(this, 'cow');changecontext('Cow','Animal')"
                                 style="background-image: url('./assets/images/cow.png');">
                             </button>
                 
-                            <button class="slide animals" onclick="switchSrc(this, 'crow');changecontext('Crow','Place')"
+                            <button class="slide animals" onclick="switchSrc(this, 'crow');changecontext('Crow','Animal')"
                                 style="background-image: url('./assets/images/crow.png');">
                             </button>
                 
                            
                 
                 
-                            <button class="slide animals" onclick="switchSrc(this, 'parrot');changecontext('Parrot','Place')"
+                            <button class="slide animals" onclick="switchSrc(this, 'parrot');changecontext('Parrot','Animal')"
                                 style="background-image: url('./assets/images/parrot.png');">
                             </button>
                 
-                            <button class="slide animals" onclick="switchSrc(this, 'peacock');changecontext('Peacock','Place')"
+                            <button class="slide animals" onclick="switchSrc(this, 'peacock');changecontext('Peacock','Animal')"
                                 style="background-image: url('./assets/images/peacock.png');">
                             </button>
                 
-                            <button class="slide animals" onclick="switchSrc(this, 'tiger');changecontext('Tiger','Place')"
+                            <button class="slide animals" onclick="switchSrc(this, 'tiger');changecontext('Tiger','Animal')"
                                 style="background-image: url('./assets/images/tiger.png');">
                             </button>
                 
-                            <button class="slide animals" onclick="switchSrc(this, 'indianRhino');changecontext('Indian Rhino','Place')"
+                            <button class="slide animals" onclick="switchSrc(this, 'indianRhino');changecontext('Indian Rhino','Animal')"
                                 style="background-image: url('./assets/images/indianRhino.png');">
                             </button>
                 
-                            <button id="earth-button" class="slide" onclick="switchSrc(this, 'earth');changecontext('Earth','Place')"
+                            <button id="earth-button" class="slide" onclick="switchSrc(this, 'earth');changecontext('Earth','Thing')"
                                 style="background-image: url('./assets/images/earth.png');">
                             </button>
                             
-                            <button id="robot-button" class="slide" onclick="switchSrc(this, 'RobotExpressive');changecontext('Robot','Place')"
+                            <button id="robot-button" class="slide" onclick="switchSrc(this, 'RobotExpressive');changecontext('Robot','Thing')"
                                 style="background-image: url('./assets/images/RobotExpressive.png');">
                             </button>
                             
                             
-                            <button class="slide" onclick="switchSrc(this, 'Astronaut');changecontext('Astronaut','Place')"
+                            <button class="slide" onclick="switchSrc(this, 'Astronaut');changecontext('Astronaut','Thing')"
                                 style="background-image: url('./assets/images/astronaut.png');">
                             </button>
 
@@ -178,6 +182,21 @@
         
         function changecontext(name, type){
             document.getElementById("objname").innerHTML = name;
+            document.getElementById("objtype").innerHTML = type;
+            if(type==="Musical  Instrument"){
+                document.getElementById("mv").style.background="#cbefbb";
+            }
+            if(type==="Vehicle"){
+                document.getElementById("mv").style.background="#ffe4bc";
+            }
+            if(type==="Animal"){
+                document.getElementById("mv").style.background="#c2e8ff";
+            }
+            if(type==="Thing"){
+                document.getElementById("mv").style.background="#dddddd";
+            }
+            
+            
         }
     </script>
     <!-- MISC -->
