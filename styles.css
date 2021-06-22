@@ -191,13 +191,6 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
   display: none;
 }
 
-#robot-button {
-  background-color: aquamarine;
-}
-
-#earth-button {
-  background-color: rgb(78, 165, 247);
-}
 /*
 Anotations Code
 */
@@ -234,7 +227,3 @@ ano-button[slot="hotspot-foot"]:not([data-visible]) {
 /*
 Anotations End
 */
-
-.slide {
-  background-color: #212121;
-}

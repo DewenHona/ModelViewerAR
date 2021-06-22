@@ -1,7 +1,41 @@
 ______________________________( categories )__________________________________
-                                /       \              \            \
-                              Animals  Instruments     Places       Objects
-                              /             \            \
-                             Tger           Sitar       
-                             Peacock         Veena   
-                            /                  \
+                                /       \              \            \        \
+                              Animals  Instruments     Places       Objects   prominent indian
+                              /             \            \            \         \
+                             Tiger           Sitar       Taj Mahal               Modi
+                                                \           \                     \
+                            /                    Veena                             Budhha
+                           Rhino 
+
+                             Peacock        
+                            /                  
+                          Birds               
+Animals{
+
+  //DOMESTIC
+  cat
+  dog
+  cow
+  
+  //WILD
+  tiger
+  Peacock
+  
+  //BIRDS
+  crow
+} 
+Instruments{
+  flute
+} 
+Places{
+  
+}
+Toy {
+
+}
+Objects{
+  car
+  bus
+  
+}
+
