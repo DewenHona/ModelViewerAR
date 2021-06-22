@@ -31,11 +31,18 @@
         </div>
 
         <!-- Annotations for ASTRONAUT-->
+
         <!-- <button class="anno-btn" slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1">Helmet</button>
-        <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">Hand
-            <button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23"
-                data-visibility-attribute="visible">Legs</button> -->
-        <!-- Annotations-end -->
+        <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">Hand</button>
+        <button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23"
+            data-visibility-attribute="visible">Legs</button> -->
+
+
+        <button class="anno-btn" slot="hotspot-visor" data-position="0.05 0.82 -0.65    "
+            data-normal="0.63 0.16 -0.75">Tail</button>
+
+
+
 
         <button slot="ar-button" id="ar-button">&nbsp;AR</button>
 
@@ -88,23 +95,14 @@
                         </button>
 
                         <button id="robot-button" class="slide animals"
-                            onclick="switchSrc(this, 'dog');changecontext('Car','Vehicle')"
+                            onclick="switchSrc(this, 'dog');changecontext('Dog','Animal')"
                             style="background-image: url('./assets/images/dog.png');">
                         </button>
 
                         <button id="robot-button" class="slide animals"
-                            onclick="switchSrc(this, 'cat');changecontext('Car','Vehicle')"
+                            onclick="switchSrc(this, 'cat');changecontext('Cat','Animal')"
                             style="background-image: url('./assets/images/cat.png');">
                         </button>
-
-
-                        <button class="slide animals"
-                            onclick="switchSrc(this, 'crow');changecontext('Crow','Animal⠀⠀⠀⠀⠀')"
-                            style="background-image: url('./assets/images/crow.png');">
-                        </button>
-
-
-
 
                         <button class="slide animals"
                             onclick="switchSrc(this, 'parrot');changecontext('Parrot','Animal⠀⠀⠀⠀⠀')"
@@ -169,7 +167,7 @@
             //add sound src dynamically
             var path = "./assets/audio/";
             var audiofile = document.getElementById('sound-aud').src = path + name + '.wav';
-            console.log(audiofile);
+
 
             // ANIMATION 
             if (name == "RobotExpressive") {
