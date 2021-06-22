@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#FF6241" />
+    <link rel="stylesheet" href="./gamestyles.css">
+    <link rel="stylesheet" href="./quizstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+    <body>
+        <center>
+        
+            <div style="color: palevioletred;  text-shadow: 1px 1px 2px  #000000;"><h1>Question 1</h1></div>
+        
+            
+            <div class="grid-container">
+                <div class="grid-item">
+                    <button class="slide music" onclick="switchSrc(this, 'bell');changecontext('Bell','Musical  Instrument')"
+                    style="background-image: url('./assets/images/bell.png');">
+                </button><span>fhdufdj</span></div>
+                <div class="grid-item"><button class="slide music" onclick="switchSrc(this, 'bell');changecontext('Bell','Musical  Instrument')"
+                    style="background-image: url('./assets/images/dog.png');">
+                </button></div>
+                <div class="grid-item"><button class="slide music" onclick="switchSrc(this, 'bell');changecontext('Bell','Musical  Instrument')"
+                    style="background-image: url('./assets/images/fox.png');">
+                </button></div>
+                <div class="grid-item"><button class="slide music" onclick="switchSrc(this, 'bell');changecontext('Bell','Musical  Instrument')"
+                    style="background-image: url('./assets/images/cat.png');">
+                </button></div>
+              </div>
+            <button class="fill" onclick="wrongtoast();">
+            Test
+            
+        </button>
+
+        <div id='snackbar'>Wrong Answer 😞</div>
+
+        <script>
+            function wrongtoast() {
+              var x = document.getElementById("snackbar");
+              x.className = "show";
+              setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            }
+
+
+        </script>
+        
+
+        </center>
+    </body> 
+</html>
