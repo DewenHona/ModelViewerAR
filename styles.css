@@ -194,33 +194,32 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
 /*
 Anotations Code
 */
-ano-button {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  border: none;
-  background-color: blue;
-  box-sizing: border-box;
-}
-
-ano-button[slot="hotspot-hand"] {
-  --min-hotspot-opacity: 0;
-  background-color: red;
-}
-
-ano-button[slot="hotspot-foot"]:not([data-visible]) {
-  background-color: transparent;
-  border: 3px solid blue;
-}
+/* .anno-btn{
+  border-radius: 10px !important;
+  box-shadow: 7px 10px 26px -3px rgba(114, 0, 104, 0.36) !important;
+  color: red;
+} */
 
 #annotation {
-  background-color: #888888;
+  background-color: #f3f3f3;
   position: absolute;
   transform: translate(10px, 10px);
-  border-radius: 10px;
   padding: 10px;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  border-radius: 12px;
+  color:#212121;
+  font-weight: bold;
+  border: #212121 2px solid;
+
 }
+
+button [slot=hotspot-visor].anno-btn{
+  background-color: #6babff;
+  font-family: Roboto;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
 :not(:defined) > * {
   display: none;
 }
@@ -241,6 +240,10 @@ Anotations End
 .music {
   background-color: #7ed957;
 }
+.thing {
+  background-color: #6b6eff;
+
+}
 
 #objdesc {
   position: absolute;
@@ -250,15 +253,6 @@ Anotations End
   font-size: 1vh;
 }
 
-#objname {
-  font-size: 2.5vh;
-  color: black;
-  background-color: #212121;
-  border-radius: 20px;
-  color: aliceblue;
-  padding: 5%;
-}
-
 /* popup modal */
 #ann-astro button{
   display: none;
@@ -266,4 +260,32 @@ Anotations End
 
 #anno-tiger {
   display: block;
+}
+
+#fab_main_btn{
+  background-color:#F44336;
+  width:60px;
+  height:60px;
+  border-radius:100%;
+  background:#F44336;
+  border:none;
+  outline:none;
+  color:#FFF;
+  font-size:36px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  transition:.3s;  
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  position:fixed;
+  bottom:3%;
+  right:3%;
+  z-index: 999999999  ;
+
+}
+fab_main_btn:hover {
+  /* transform:scale(1.1);
+  transform:rotate(45deg);
+  -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg); */
+    box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), inset 0 3px 6px rgba(0,0,0,0.23);
+
 }

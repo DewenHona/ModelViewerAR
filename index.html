@@ -15,7 +15,7 @@
 </head>
 
 <body>
-
+    <button id="fab_main_btn"></button>
     <model-viewer id="mv" src="./assets/models/bell.glb" poster="./assets/images/bell.png" shadow-intensity="1" ar
         ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel" environment-image="neutral">
 
@@ -31,24 +31,35 @@
         </div>
 
 
-
-
-        <button class="anno-btn" slot="hotspot-visor" data-position="" data-normal=""></button>
+        <button class"anno-btn" slot="hotspot-visor" data-position="" data-normal="">Helmet
+            <div id="annotation">Radiation free visor</div>
+        </button>
 
         <script>
 
-            function switchAnno() {
-                const annoButton = document.createElement("button");
-                annoButton.classList.add("anno-btn");
-                for (i = 1; 1 <= anoo.lenght(); i++) {
+            var annoData = {
+                "1":
+                    [
+                        { "data_pos": "0 1.75 0.35", "data_point": "0 0 1" }
+                    ],
+                "2":
+                    [
+                        { "data_pos": "0 1.75 0.35", "data_point": "0 0 1" }
 
-                }
+                    ],
+                "3":
+                    [
+                        { "data_pos": "0 1.75 0.35", "data_point": "0 0 1" }
 
+                    ]
             }
+
+
+            document.getElementsById("btn" + string(i)).setAttribute("dataposn", "dataposn[i]");
+            document.getElementsById("btn" + string(i)).setAttribute("datanorml", "datanorml[i]");
+
+            //ToDo
         </script>
-
-
-
 
 
         <button slot="ar-button" id="ar-button">&nbsp;AR</button>
@@ -74,9 +85,7 @@
                 <div class="slider">
                     <div class="slides">
 
-
-
-                        <button class="slide music"
+                        <button id="sitar-anno" class="slide music"
                             onclick="switchSrc(this, 'sitar');changecontext('Sitar','Musical  Instrument')"
                             style="background-image: url('./assets/images/sitar.png');">
                         </button>
@@ -131,54 +140,55 @@
                             style="background-image: url('./assets/images/indianRhino.png');">
                         </button>
 
-                        <button id="earth-button" class="slide"
+                        <button id="earth-button" class="slide thing"
                             onclick="switchSrc(this, 'earth');changecontext('Earth','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/earth.png');">
                         </button>
 
-                        <button id="robot-button" class="slide"
+                        <button id="robot-button" class="slide thing"
                             onclick="switchSrc(this, 'RobotExpressive');changecontext('Robot','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/RobotExpressive.png');">
                         </button>
 
 
-                        <button class="slide"
+                        <button id="sitar-anno" class="slide thing"
                             onclick="switchSrc(this, 'Astronaut');changecontext('Astronaut','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/astronaut.png');">
                         </button>
 
                         <!-- NEW MODELS -->
 
-                        <button class="slide"
+                        <button class="slide thing"
                             onclick="switchSrc(this, 'bicycle');changecontext('bicycle','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/bicycle.png');">
                         </button>
 
-                        <button class="slide"
+                        <button class="slide thing"
                             onclick="switchSrc(this, 'butterfly');changecontext('butterfly','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/butterfly.png');">
                         </button>
 
-                        <button class="slide" onclick="switchSrc(this, 'robin');changecontext('robin','Thing⠀⠀⠀⠀⠀⠀⠀')"
+                        <button class="slide thing"
+                            onclick="switchSrc(this, 'robin');changecontext('robin','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/robin.png');">
                         </button>
 
-                        <button class="slide"
+                        <button class="slide thing"
                             onclick="switchSrc(this, 'tractor');changecontext('tractor','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/tractor.png');">
                         </button>
 
-                        <button class="slide"
+                        <button class="slide thing"
                             onclick="switchSrc(this, 'chicken');changecontext('chicken','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/chicken.png');">
                         </button>
 
-                        <button class="slide"
+                        <button class="slide thing"
                             onclick="switchSrc(this, 'elephant');changecontext('elephant','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/elephant.png');">
                         </button>
 
-                        <button class="slide"
+                        <button class="slide thing"
                             onclick="switchSrc(this, 'helicopter');changecontext('helicopter','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/helicopter.png');">
                         </button>
@@ -208,6 +218,7 @@
             slides.forEach((element) => { element.classList.remove("selected"); });
             element.classList.add("selected");
 
+            switchAnno();
 
             //add sound src dynamically
             var path = "./assets/audio/";
@@ -249,8 +260,9 @@
                 document.getElementById("mv").style.background = "#c2e8ff";
             }
             if (type === "Thing⠀⠀⠀⠀⠀⠀⠀") {
-                document.getElementById("mv").style.background = "#dddddd";
+                document.getElementById("mv").style.background = "#b1b3fd";
             }
+
         }
     </script>
 
