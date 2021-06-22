@@ -260,3 +260,10 @@ Anotations End
 }
 
 /* popup modal */
+#ann-astro button{
+  display: none;
+}
+
+#anno-tiger {
+  display: block;
+}

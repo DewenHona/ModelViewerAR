@@ -30,16 +30,40 @@
             Story
         </div>
 
-        <!-- Annotations for ASTRONAUT-->
+        <!-- 
+            create buttons -> no of data points = no of hotspots
+            parse dataPostion
+            parse dataNormal
+            set name of Element as hotspot name
 
-        <!-- <button class="anno-btn" slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1">Helmet</button>
-        <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">Hand</button>
-        <button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23"
-            data-visibility-attribute="visible">Legs</button> -->
+         -->
 
 
-        <button class="anno-btn" slot="hotspot-visor" data-position="0.05 0.82 -0.65    "
-            data-normal="0.63 0.16 -0.75">Tail</button>
+        da<button class="anno-btn" slot="hotspot-visor" data-position="" data-normal=""></button>
+
+        <script>
+            var annos = {
+                "Annotations": [
+                    {
+                        "Object": "Astronaut",
+                        "dataPosition": "0 1.75 0.35",
+                        "dataNormal": "0 0 1",
+                        "pointName": "Helmet"
+                    },
+                    {
+                        "Object": "Tiger",
+                        "dataPosition": "0.05 0.82 -0.65",
+                        "dataNormal": "0.63 0.16 -0.75",
+                        "pointName": "Tail"
+                    }
+                ]
+            }
+
+            document.getElementsByClassName("anno-btn") //set data to this class buton
+
+
+        </script>
+
 
 
 
@@ -208,6 +232,10 @@
             }
         }
     </script>
+
+
+
+
     <!-- MISC -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
     </script>
