@@ -88,11 +88,11 @@
                         </button>
 
 
-                        <button class="slide animals" onclick="switchSrc(this, 'fox');changecontext('Fox','Animal')"
-                            style="background-image: url('./assets/images/fox.png');">
+                        <button class="slide animals" onclick="switchSrc(this, 'dog');changecontext('Dog','Animal')"
+                            style="background-image: url('./assets/images/dog.png');">
                         </button>
 
-                        <button class="slide animals" onclick="switchSrc(this, 'cat');changecontext('Cat','Animal')"
+                        <button class="slide animals" onclick="switchSrc(this, 'cat');changecontext('cat','Animal')"
                             style="background-image: url('./assets/images/cat.png');">
                         </button>
 
@@ -166,9 +166,9 @@
 
 
             //add sound src dynamically
-            const path = "./assets/audio/";
+            var path = "./assets/audio/";
             var audiofile = document.getElementById('sound-aud').src = path + name + '.wav';
-
+            console.log(audiofile);
 
             // ANIMATION 
             if (name == "RobotExpressive") {

@@ -162,7 +162,7 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
 }
 
 .slide.selected {
-  border: 5px solid #000000;
+  border: 0.5vh solid #000000;
 }
 
 .slide:focus {
@@ -258,3 +258,5 @@ Anotations End
   color: aliceblue;
   padding: 5%;
 }
+
+/* popup modal */
