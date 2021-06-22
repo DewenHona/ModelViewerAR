@@ -224,6 +224,20 @@ ano-button[slot="hotspot-foot"]:not([data-visible]) {
 :not(:defined) > * {
   display: none;
 }
+
 /*
 Anotations End
 */
+
+/* color classes */
+.animals {
+  background-color: #cb6ce6;
+}
+
+.objects {
+  background-color: #ffbd59;
+}
+
+.music {
+  background-color: #7ed957;
+}
