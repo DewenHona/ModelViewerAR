@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    
 
 </head>
 
@@ -19,11 +18,14 @@
 
     <model-viewer id="mv" src="./assets/models/bell.glb" poster="./assets/images/bell.png" shadow-intensity="1" ar
         ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel" environment-image="neutral">
+
         <div id="objdesc">
             <h1 id="objtype">Musical Instrument</h1>
-            <h1 id="objname">Bell</h1>
-            
+            <div id="temp">
+                <h1 id="objname">Bell</h1>
+            </div>
         </div>
+
         <div id="story-card">
             Story
         </div>
@@ -33,111 +35,121 @@
         <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">Hand
             <button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23"
                 data-visibility-attribute="visible">Legs</button> -->
-            <!-- Annotations-end -->
+        <!-- Annotations-end -->
 
-            <button slot="ar-button" id="ar-button">&nbsp;AR</button>
+        <button slot="ar-button" id="ar-button">&nbsp;AR</button>
 
-            <div id="ar-prompt">
-                <img src="./assets/images/hand.png">
-            </div>
+        <div id="ar-prompt">
+            <img src="./assets/images/hand.png">
+        </div>
 
-            <button id="ar-failure">
-                AR is not tracking!
-            </button>
+        <button id="ar-failure">
+            AR is not tracking!
+        </button>
 
-            <!-- button audio-start -->
-            <audio loop id="sound-aud" src="/assets/audio/bell.wav" preload="auto"></audio>
-            <button id="sound-btn" onclick="document.getElementById('sound-aud').play();">Audio</button>
-            <!-- button audio-end -->
+        <!-- button audio-start -->
+        <audio loop id="sound-aud" src="/assets/audio/bell.wav" preload="auto"></audio>
+        <button id="sound-btn" onclick="document.getElementById('sound-aud').play();">Audio</button>
+        <!-- button audio-end -->
 
-            <!-- interactions-Start -->
-            <div id="interactions">
+        <!-- interactions-Start -->
+        <div id="interactions">
 
-                <div id="story">
-                    <!-- Slider-start -->
-                    <div class="slider">
-                        <div class="slides">
-                
-                            
-                
-                            
-                
-                            <!-- NEW MODELS -->
-                
-                            <button class="slide music" onclick="switchSrc(this, 'bell');changecontext('Bell','Musical  Instrument')"
-                                style="background-image: url('./assets/images/bell.png');">
-                            </button>
+            <div id="story">
+                <!-- Slider-start -->
+                <div class="slider">
+                    <div class="slides">
 
-                            <button id="robot-button" class="slide music" onclick="switchSrc(this, 'flute');changecontext('Flute','Musical  Instrument')"
-                                style="background-image: url('./assets/images/flute.png');">
-                            </button>
-                
-                            <button id="earth-button" class="slide objects" onclick="switchSrc(this, 'bus');changecontext('Bus','Vehicle');"
-                                style="background-image: url('./assets/images/bus.png');">
-                            </button>
-                
-                            <button id="robot-button" class="slide objects" onclick="switchSrc(this, 'car');changecontext('Car','Vehicle')"
-                                style="background-image: url('./assets/images/car.png');">
-                            </button>
-                
-                
-                            <button class="slide animals" onclick="switchSrc(this, 'fox');changecontext('Fox','Animal')"
-                                style="background-image: url('./assets/images/fox.png');">
-                            </button>
+                        <!-- NEW MODELS -->
 
-                            <button class="slide animals" onclick="switchSrc(this, 'cat');changecontext('Cat','Animal')"
-                                style="background-image: url('./assets/images/cat.png');">
-                            </button>
-                
-                            <button class="slide animals" onclick="switchSrc(this, 'cow');changecontext('Cow','Animal')"
-                                style="background-image: url('./assets/images/cow.png');">
-                            </button>
-                
-                            <button class="slide animals" onclick="switchSrc(this, 'crow');changecontext('Crow','Animal')"
-                                style="background-image: url('./assets/images/crow.png');">
-                            </button>
-                
-                           
-                
-                
-                            <button class="slide animals" onclick="switchSrc(this, 'parrot');changecontext('Parrot','Animal')"
-                                style="background-image: url('./assets/images/parrot.png');">
-                            </button>
-                
-                            <button class="slide animals" onclick="switchSrc(this, 'peacock');changecontext('Peacock','Animal')"
-                                style="background-image: url('./assets/images/peacock.png');">
-                            </button>
-                
-                            <button class="slide animals" onclick="switchSrc(this, 'tiger');changecontext('Tiger','Animal')"
-                                style="background-image: url('./assets/images/tiger.png');">
-                            </button>
-                
-                            <button class="slide animals" onclick="switchSrc(this, 'indianRhino');changecontext('Indian Rhino','Animal')"
-                                style="background-image: url('./assets/images/indianRhino.png');">
-                            </button>
-                
-                            <button id="earth-button" class="slide" onclick="switchSrc(this, 'earth');changecontext('Earth','Thing')"
-                                style="background-image: url('./assets/images/earth.png');">
-                            </button>
-                            
-                            <button id="robot-button" class="slide" onclick="switchSrc(this, 'RobotExpressive');changecontext('Robot','Thing')"
-                                style="background-image: url('./assets/images/RobotExpressive.png');">
-                            </button>
-                            
-                            
-                            <button class="slide" onclick="switchSrc(this, 'Astronaut');changecontext('Astronaut','Thing')"
-                                style="background-image: url('./assets/images/astronaut.png');">
-                            </button>
+                        <button class="slide music"
+                            onclick="switchSrc(this, 'sitar');changecontext('Sitar','Musical  Instrument')"
+                            style="background-image: url('./assets/images/sitar.png');">
+                        </button>
 
-                        </div>
+                        <button class="slide music"
+                            onclick="switchSrc(this, 'bell');changecontext('Bell','Musical  Instrument')"
+                            style="background-image: url('./assets/images/bell.png');">
+                        </button>
+
+                        <button id="robot-button" class="slide music"
+                            onclick="switchSrc(this, 'flute');changecontext('Flute','Musical  Instrument')"
+                            style="background-image: url('./assets/images/flute.png');">
+                        </button>
+
+                        <button id="earth-button" class="slide objects"
+                            onclick="switchSrc(this, 'bus');changecontext('Bus','Vehicle');"
+                            style="background-image: url('./assets/images/bus.png');">
+                        </button>
+
+                        <button id="robot-button" class="slide objects"
+                            onclick="switchSrc(this, 'car');changecontext('Car','Vehicle')"
+                            style="background-image: url('./assets/images/car.png');">
+                        </button>
+
+
+                        <button class="slide animals" onclick="switchSrc(this, 'fox');changecontext('Fox','Animal')"
+                            style="background-image: url('./assets/images/fox.png');">
+                        </button>
+
+                        <button class="slide animals" onclick="switchSrc(this, 'cat');changecontext('Cat','Animal')"
+                            style="background-image: url('./assets/images/cat.png');">
+                        </button>
+
+                        <button class="slide animals" onclick="switchSrc(this, 'cow');changecontext('Cow','Animal')"
+                            style="background-image: url('./assets/images/cow.png');">
+                        </button>
+
+                        <button class="slide animals" onclick="switchSrc(this, 'crow');changecontext('Crow','Animal')"
+                            style="background-image: url('./assets/images/crow.png');">
+                        </button>
+
+
+
+
+                        <button class="slide animals"
+                            onclick="switchSrc(this, 'parrot');changecontext('Parrot','Animal')"
+                            style="background-image: url('./assets/images/parrot.png');">
+                        </button>
+
+                        <button class="slide animals"
+                            onclick="switchSrc(this, 'peacock');changecontext('Peacock','Animal')"
+                            style="background-image: url('./assets/images/peacock.png');">
+                        </button>
+
+                        <button class="slide animals" onclick="switchSrc(this, 'tiger');changecontext('Tiger','Animal')"
+                            style="background-image: url('./assets/images/tiger.png');">
+                        </button>
+
+                        <button class="slide animals"
+                            onclick="switchSrc(this, 'indianRhino');changecontext('Indian Rhino','Animal')"
+                            style="background-image: url('./assets/images/indianRhino.png');">
+                        </button>
+
+                        <button id="earth-button" class="slide"
+                            onclick="switchSrc(this, 'earth');changecontext('Earth','Thing')"
+                            style="background-image: url('./assets/images/earth.png');">
+                        </button>
+
+                        <button id="robot-button" class="slide"
+                            onclick="switchSrc(this, 'RobotExpressive');changecontext('Robot','Thing')"
+                            style="background-image: url('./assets/images/RobotExpressive.png');">
+                        </button>
+
+
+                        <button class="slide" onclick="switchSrc(this, 'Astronaut');changecontext('Astronaut','Thing')"
+                            style="background-image: url('./assets/images/astronaut.png');">
+                        </button>
+
                     </div>
-                    <!-- Slider-end -->
-                
                 </div>
-                    <!-- Slider-end -->
+                <!-- Slider-end -->
 
-                </div>
-                <!-- interactions-end -->
+            </div>
+            <!-- Slider-end -->
+
+        </div>
+        <!-- interactions-end -->
 
     </model-viewer>
 
@@ -163,6 +175,9 @@
                 modelViewer.setAttribute("animation-name", "Running");
                 modelViewer.autoplay = true;
             }
+            else if (name == "tiger") {
+                modelViewer.autoplay = true;
+            }
             else {
                 modelViewer.setAttribute("animation-name", "false");
                 modelViewer.autoplay = false;
@@ -174,29 +189,24 @@
             ev.preventDefault();
         });
 
-
- 
-
     </script>
     <script>
-        
-        function changecontext(name, type){
+
+        function changecontext(name, type) {
             document.getElementById("objname").innerHTML = name;
             document.getElementById("objtype").innerHTML = type;
-            if(type==="Musical  Instrument"){
-                document.getElementById("mv").style.background="#cbefbb";
+            if (type === "Musical  Instrument") {
+                document.getElementById("mv").style.background = "#cbefbb";
             }
-            if(type==="Vehicle"){
-                document.getElementById("mv").style.background="#ffe4bc";
+            if (type === "Vehicle") {
+                document.getElementById("mv").style.background = "#ffe4bc";
             }
-            if(type==="Animal"){
-                document.getElementById("mv").style.background="#c2e8ff";
+            if (type === "Animal") {
+                document.getElementById("mv").style.background = "#c2e8ff";
             }
-            if(type==="Thing"){
-                document.getElementById("mv").style.background="#dddddd";
+            if (type === "Thing") {
+                document.getElementById("mv").style.background = "#dddddd";
             }
-            
-            
         }
     </script>
     <!-- MISC -->
