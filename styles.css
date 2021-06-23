@@ -193,12 +193,7 @@ model-viewer[ar-tracking="not-tracking"] > #ar-failure {
 
 /*
 Anotations Code
-*/
-/* .anno-btn{
-  border-radius: 10px !important;
-  box-shadow: 7px 10px 26px -3px rgba(114, 0, 104, 0.36) !important;
-  color: red;
-} */
+
 
 #annotation {
   background-color: #f3f3f3;
@@ -224,7 +219,6 @@ button [slot=hotspot-visor].anno-btn{
   display: none;
 }
 
-/*
 Anotations End
 */
 

@@ -30,8 +30,8 @@
             Story
         </div>
 
-
-        <!-- <button class"anno-btn" slot="hotspot-visor" data-position="" data-normal="">Helmet
+         <!-- 
+         <button class"anno-btn" slot="hotspot-visor" data-position="" data-normal="">Helmet
             <div id="annotation">Radiation free visor</div>
         </button> -->
 
@@ -59,7 +59,7 @@
             document.getElementsById("btn" + string(i)).setAttribute("datanorml", "datanorml[i]");
 
            
-        </script> -->
+        </script> --> --
 
 
         <button slot="ar-button" id="ar-button">&nbsp;AR</button>
@@ -85,6 +85,7 @@
                 <div class="slider">
                     <div class="slides">
 
+                        <!-- MUSIC INSTRUMENTS -->
                         <button id="sitar-anno" class="slide music"
                             onclick="switchSrc(this, 'sitar');changecontext('Sitar','Musical  Instrument')"
                             style="background-image: url('./assets/images/sitar.png');">
@@ -100,6 +101,12 @@
                             style="background-image: url('./assets/images/flute.png');">
                         </button>
 
+                        <!-- VEHICLES -->
+                        <button class="slide objects"
+                            onclick="switchSrc(this, 'bicycle');changecontext('Bicycle','Vehicle')"
+                            style="background-image: url('./assets/images/bicycle.png');">
+                        </button>
+
                         <button id="earth-button" class="slide objects"
                             onclick="switchSrc(this, 'bus');changecontext('Bus','Vehicle');"
                             style="background-image: url('./assets/images/bus.png');">
@@ -110,6 +117,17 @@
                             style="background-image: url('./assets/images/car.png');">
                         </button>
 
+                        <button class="slide objects" onclick="switchSrc(this, 'helicopter');changecontext('Helicopter','Vehicle')"
+                            style="background-image: url('./assets/images/helicopter.png');">
+                        </button>
+
+                        <button class="slide objects"
+                            onclick="switchSrc(this, 'tractor');changecontext('Tractor','Vehicle')"
+                            style="background-image: url('./assets/images/tractor.png');">
+                        </button>
+
+            
+                        <!-- ANIMALS -->
                         <button id="robot-button" class="slide animals"
                             onclick="switchSrc(this, 'dog');changecontext('Dog','Animal')"
                             style="background-image: url('./assets/images/dog.png');">
@@ -140,6 +158,27 @@
                             style="background-image: url('./assets/images/indianRhino.png');">
                         </button>
 
+                        <button class="slide animals"
+                            onclick="switchSrc(this, 'butterfly');changecontext('Butterfly','Animal')"
+                            style="background-image: url('./assets/images/butterfly.png');">
+                        </button>
+
+                        <button class="slide animals"
+                            onclick="switchSrc(this, 'robin');changecontext('Robin','Animal')"
+                            style="background-image: url('./assets/images/robin.png');">
+                        </button>
+
+
+                        <button class="slide animals"
+                            onclick="switchSrc(this, 'chicken');changecontext('Chicken','Animal')"
+                            style="background-image: url('./assets/images/chicken.png');">
+                        </button>
+
+                        <button class="slide animals"
+                            onclick="switchSrc(this, 'elephant');changecontext('Elephant','Animal')"
+                            style="background-image: url('./assets/images/elephant.png');">
+                        </button>
+
                         <button id="earth-button" class="slide thing"
                             onclick="switchSrc(this, 'earth');changecontext('Earth','Thing⠀⠀⠀⠀⠀⠀⠀')"
                             style="background-image: url('./assets/images/earth.png');">
@@ -156,42 +195,7 @@
                             style="background-image: url('./assets/images/astronaut.png');">
                         </button>
 
-                        <!-- NEW MODELS -->
-
-                        <button class="slide thing"
-                            onclick="switchSrc(this, 'bicycle');changecontext('bicycle','Thing⠀⠀⠀⠀⠀⠀⠀')"
-                            style="background-image: url('./assets/images/bicycle.png');">
-                        </button>
-
-                        <button class="slide thing"
-                            onclick="switchSrc(this, 'butterfly');changecontext('butterfly','Thing⠀⠀⠀⠀⠀⠀⠀')"
-                            style="background-image: url('./assets/images/butterfly.png');">
-                        </button>
-
-                        <button class="slide thing"
-                            onclick="switchSrc(this, 'robin');changecontext('robin','Thing⠀⠀⠀⠀⠀⠀⠀')"
-                            style="background-image: url('./assets/images/robin.png');">
-                        </button>
-
-                        <button class="slide thing"
-                            onclick="switchSrc(this, 'tractor');changecontext('tractor','Thing⠀⠀⠀⠀⠀⠀⠀')"
-                            style="background-image: url('./assets/images/tractor.png');">
-                        </button>
-
-                        <button class="slide thing"
-                            onclick="switchSrc(this, 'chicken');changecontext('chicken','Thing⠀⠀⠀⠀⠀⠀⠀')"
-                            style="background-image: url('./assets/images/chicken.png');">
-                        </button>
-
-                        <button class="slide thing"
-                            onclick="switchSrc(this, 'elephant');changecontext('elephant','Thing⠀⠀⠀⠀⠀⠀⠀')"
-                            style="background-image: url('./assets/images/elephant.png');">
-                        </button>
-
-                        <button class="slide thing"
-                            onclick="switchSrc(this, 'helicopter');changecontext('helicopter','Thing⠀⠀⠀⠀⠀⠀⠀')"
-                            style="background-image: url('./assets/images/helicopter.png');">
-                        </button>
+                        
 
 
 
@@ -217,8 +221,6 @@
             const slides = document.querySelectorAll(".slide");
             slides.forEach((element) => { element.classList.remove("selected"); });
             element.classList.add("selected");
-
-           // switchAnno();
 
             //add sound src dynamically
             var path = "./assets/audio/";
