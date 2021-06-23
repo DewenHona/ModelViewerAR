@@ -20,19 +20,26 @@
         ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel" environment-image="neutral">
 
         <div id="objdesc">
-            <h1 id="objtype">Musical Instrument</h1>
+            <h1 id="objtype"></h1>
             <div id="temp">
-                <h1 id="objname">Bell</h1>
+                <h1 id="objname"></h1>
             </div>
         </div>
 
-        <div id="story-card">
+        <!-- <div id="story-card">
             Story
-        </div>
+        </div>-->
+        <button id="infoprompt">
+            <span class="material-icons-outlined">
+                <img src=" ./assets/images/info_black_24dp.svg" alt="" style="height:3vh; width: 3vh; display:inline;">
+                <span>
+                    <h4 id="infotext">info</h4>
+                </span>
+            </span>
+        </button>
 
-         <!-- 
-         <button class"anno-btn" slot="hotspot-visor" data-position="" data-normal="">Helmet
-            <div id="annotation">Radiation free visor</div>
+        <!-- <button class" anno-btn" slot="hotspot-visor" data-position="" data-normal="">Helmet
+                <div id="annotation">Radiation free visor</div>
         </button> -->
 
         <!-- <script>
@@ -59,8 +66,7 @@
             document.getElementsById("btn" + string(i)).setAttribute("datanorml", "datanorml[i]");
 
            
-        </script> --> --
-
+        </script> -->
 
         <button slot="ar-button" id="ar-button">&nbsp;AR</button>
 
@@ -84,6 +90,39 @@
                 <!-- Slider-start -->
                 <div class="slider">
                     <div class="slides">
+
+                        <!-- NEW HERITAGE -->
+
+                        <button id="sitar-anno" class="slide"
+                            onclick="switchSrc(this, 'bowandarrow');changecontext('Bow & Arrow','NEW HR')"
+                            style="background-image: url('./assets/images/bowandarrow.png">
+                        </button>
+
+                        <button class=" slide"
+                            onclick="switchSrc(this, 'harappanArtifact');changecontext('Harappan Artifact','NEW HR')"
+                            style="background-image: url('./assets/images/harappanArtifact.png');">
+                        </button>
+
+                        <button id="robot-button" class="slide"
+                            onclick="switchSrc(this, 'laxmi');changecontext('Laxmi','NEW HR')"
+                            style="background-image: url('./assets/images/laxmi.png');">
+                        </button>
+
+                        <button id="sitar-anno" class="slide"
+                            onclick="switchSrc(this, 'nandi');changecontext('Nandi','NEW HR')"
+                            style="background-image: url('./assets/images/nandi.png');">
+                        </button>
+
+                        <!-- <button class="slide music"
+                            onclick="switchSrc(this, 'bell');changecontext('Bell','Musical  Instrument')"
+                            style="background-image: url('./assets/images/bell.png');">
+                        </button>
+
+                        <button id="robot-button" class="slide music"
+                            onclick="switchSrc(this, 'flute');changecontext('Flute','Musical  Instrument')"
+                            style="background-image: url('./assets/images/flute.png');">
+                        </button> -->
+
 
                         <!-- MUSIC INSTRUMENTS -->
                         <button id="sitar-anno" class="slide music"
@@ -117,7 +156,8 @@
                             style="background-image: url('./assets/images/car.png');">
                         </button>
 
-                        <button class="slide objects" onclick="switchSrc(this, 'helicopter');changecontext('Helicopter','Vehicle')"
+                        <button class="slide objects"
+                            onclick="switchSrc(this, 'helicopter');changecontext('Helicopter','Vehicle')"
                             style="background-image: url('./assets/images/helicopter.png');">
                         </button>
 
@@ -126,7 +166,7 @@
                             style="background-image: url('./assets/images/tractor.png');">
                         </button>
 
-            
+
                         <!-- ANIMALS -->
                         <button id="robot-button" class="slide animals"
                             onclick="switchSrc(this, 'dog');changecontext('Dog','Animal')"
@@ -163,8 +203,7 @@
                             style="background-image: url('./assets/images/butterfly.png');">
                         </button>
 
-                        <button class="slide animals"
-                            onclick="switchSrc(this, 'robin');changecontext('Robin','Animal')"
+                        <button class="slide animals" onclick="switchSrc(this, 'robin');changecontext('Robin','Animal')"
                             style="background-image: url('./assets/images/robin.png');">
                         </button>
 
@@ -195,7 +234,7 @@
                             style="background-image: url('./assets/images/astronaut.png');">
                         </button>
 
-                        
+
 
 
 
