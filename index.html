@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <button id="fab_main_btn"></button>
+    <!-- <button id="fab_main_btn"></button> -->
     <model-viewer id="mv" src="./assets/models/bell.glb" poster="./assets/images/bell.png" shadow-intensity="1" ar
         ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel" environment-image="neutral">
 
@@ -31,11 +31,11 @@
         </div>
 
 
-        <button class"anno-btn" slot="hotspot-visor" data-position="" data-normal="">Helmet
+        <!-- <button class"anno-btn" slot="hotspot-visor" data-position="" data-normal="">Helmet
             <div id="annotation">Radiation free visor</div>
-        </button>
+        </button> -->
 
-        <script>
+        <!-- <script>
 
             var annoData = {
                 "1":
@@ -58,8 +58,8 @@
             document.getElementsById("btn" + string(i)).setAttribute("dataposn", "dataposn[i]");
             document.getElementsById("btn" + string(i)).setAttribute("datanorml", "datanorml[i]");
 
-            //ToDo
-        </script>
+           
+        </script> -->
 
 
         <button slot="ar-button" id="ar-button">&nbsp;AR</button>
@@ -218,7 +218,7 @@
             slides.forEach((element) => { element.classList.remove("selected"); });
             element.classList.add("selected");
 
-            switchAnno();
+           // switchAnno();
 
             //add sound src dynamically
             var path = "./assets/audio/";
