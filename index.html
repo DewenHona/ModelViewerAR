@@ -39,6 +39,13 @@
     </span>
 </button>
 
+<button id="pausebtn" onclick="document.getElementById('sound-aud').pause();">
+    <span class="material-icons-outlined">
+        <img src=" ./assets/images/pause_circle_black_24dp.svg" alt="" style="height:5vh; width: 5vh; display:inline; position:relative;">
+        <!-- <div style="display:inline;bottom:1.3vh; position:relative;"></div>  -->
+    </span>
+</button>
+
 <div id="infobox"  onclick="off()">
 <center>
     <h2 id="infoboxtitle">About this Object</h2>
@@ -99,7 +106,7 @@
         </button>
 
         <!-- button audio-start -->
-        <audio loop id="sound-aud" src="/assets/audio/katar.wav" preload="auto"></audio>
+        <audio id="sound-aud" src="/assets/audio/katar.wav" preload="auto"></audio>
         <button id="sound-btn" onclick="document.getElementById('sound-aud').play();">Audio</button>
         <!-- button audio-end -->
 
@@ -142,22 +149,27 @@
                         </button>
 
 
-                        <button id="robot-button" class="slide god" onclick="switchSrc(this, 'vishnu');changecontext('The Preserver - Vishnu','INDIAN HERITAGE')"
-                            style="background-image: url('./assets/images/vishnu.png');">
+                        <button id="robot-button" class="slide god" onclick="switchSrc(this, 'krishna');changecontext('Lord Krishna','INDIAN HERITAGE')"
+                            style="background-image: url('./assets/images/krishna.png');">
                         </button>
                         
-                        <button id="robot-button" class="slide " onclick="switchSrc(this, 'yudistira');changecontext('Yudhishthir','INDIAN HERITAGE')"
-                            style="background-image: url('./assets/images/flute.png');">
+
+                        <button class=" slide" onclick="switchSrc(this, 'harappanArtifact');changecontext('Harappan Artifact','INDIAN HERITAGE')"
+                            style="background-image: url('./assets/images/harappanArtifact.png');">
                         </button>
 
-                        <button class=" slide" onclick="switchSrc(this, 'harappanArtifact');changecontext('Harappan Artifact','NEW HR')"
-                            style="background-image: url('./assets/images/harappanArtifact.png');">
+                        <button class=" slide" onclick="switchSrc(this, 'taj');changecontext('Taj Mahal','Architecture')"
+                            style="background-image: url('./assets/images/taj.png');">
+                        </button>
+
+                        <button class=" slide" onclick="switchSrc(this, 'suntemple');changecontext('Konark Sun Temple','Architecture')"
+                            style="background-image: url('./assets/images/suntemple.jpg');">
                         </button>
 
 
                         <!-- MUSIC INSTRUMENTS -->
                         <button id="sitar-anno" class="slide music"
-                            onclick="switchSrc(this, 'sitar');changecontext('Sitar','Musical  Instrument')"
+                            onclick="switchSrc(this, 'sitar');changecontext('Sitar','Musical  Instrument','IT is a musical insturment')"
                             style="background-image: url('./assets/images/sitar.png');">
                         </button>
 
@@ -319,10 +331,22 @@
     </script>
     <script>
 
-        function changecontext(name, type,info) {
+        function changecontext(name, type,info="") {
+
+            fetch("info.json")
+            .then(response=>response.json())
+            .then(obj=>{
+                for(let i=0;i<obj.info.length;i++){
+                    if(obj.info[i].name==name){
+                        info=obj.info[i].text;
+                        document.getElementById("infoboxinfo").innerHTML = info;
+                    }
+
+                }
+            });
             document.getElementById("objname").innerHTML = name;
             document.getElementById("objtype").innerHTML = type;
-            document.getElementById()
+            // document.getElementById("infoboxinfo").innerHTML = info;
             if (type === "Musical  Instrument") {
                 document.getElementById("mv").style.background = "#cbefbb";
             }

@@ -108,12 +108,12 @@
                         <!-- NEW HERITAGE -->
 
                         <button id="sitar-anno" class="slide"
-                            onclick="switchSrc(this, 'bowandarrow');changecontext('Bow & Arrow','NEW HR')"
+                            onclick="switchSrc(this, 'bowandarrow');changecontext('Bow & Arrow','NEW HR','This is Epic text')"
                             style="background-image: url('./assets/images/bowandarrow.png);">
                         </button>
 
                         <button class=" slide"
-                            onclick="switchSrc(this, 'harappanArtifact');changecontext('Harappan Artifact','NEW HR')"
+                            onclick="switchSrc(this, 'harappanArtifact');changecontext('Harappan Artifact','NEW HR', '')"
                             style="background-image: url('./assets/images/harappanArtifact.png');">
                         </button>
 
@@ -322,6 +322,9 @@
             if (type === "Thing⠀⠀⠀⠀⠀⠀⠀") {
                 document.getElementById("mv").style.background = "#b1b3fd";
             }
+            if (type === "Weapon       ") {
+                document.getElementById("mv").style.background = "#5ce1e6";
+            }
 
         }
     </script>
@@ -346,3 +349,4 @@ function off() {
 </body>
 
 </html>
+  
