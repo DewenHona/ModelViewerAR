@@ -16,7 +16,7 @@
 
 <body>
     <!-- <button id="fab_main_btn"></button> -->
-    <model-viewer id="mv" src="./assets/models/bell.glb" poster="./assets/images/bell.png" shadow-intensity="1" ar
+    <model-viewer id="mv" src="./assets/models/katar.glb" poster="./assets/images/katar.png" shadow-intensity="1" ar
         ar-modes="webxr scene-viewer quick-look" camera-controls alt=" A 3D model carousel" environment-image="neutral">
 
         <div id="objdesc">
@@ -29,15 +29,35 @@
         <!-- <div id="story-card">
             Story
         </div>-->
-        <button id="infoprompt">
-            <span class="material-icons-outlined">
-                <img src=" ./assets/images/info_black_24dp.svg" alt="" style="height:3vh; width: 3vh; display:inline;">
-                <span>
-                    <h4 id="infotext">info</h4>
-                </span>
-            </span>
-        </button>
 
+<!-- the information prompt below -->
+        
+<button id="infoprompt" onclick="on()">
+    <span class="material-icons-outlined">
+        <img src=" ./assets/images/info_black_24dp.svg" alt="" style="height:5vh; width: 5vh; display:inline; position:relative;">
+        <!-- <div style="display:inline;bottom:1.3vh; position:relative;"></div>  -->
+    </span>
+</button>
+
+<div id="infobox"  onclick="off()">
+<center>
+    <h2 id="infoboxtitle">About this Object</h2>
+
+    <p id="infoboxinfo">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque augue eget justo fermentum hendrerit at at odio. Quisque a dictum nisl. Curabitur libero est, pretium varius bibendum sed, condimentum ut erat. Ut vehicula nibh et nunc tincidunt faucibus. Curabitur mattis porta lectus vel volutpat. Duis nibh purus, porta eget enim eget, mollis pellentesque urna. Ut sodales placerat nibh hendrerit pretium. Maecenas auctor, dui sed ultricies luctus, dui justo gravida felis, a rutrum ipsum magna non nulla. Donec suscipit feugiat tincidunt.
+    </p>
+
+    <div class="closeinfo">
+    <button id="closeinfo" class="fill"  onclick="off()">
+        Close
+    </button>
+</div>
+</center>
+</div>
+
+
+
+    
         <!-- <button class" anno-btn" slot="hotspot-visor" data-position="" data-normal="">Helmet
                 <div id="annotation">Radiation free visor</div>
         </button> -->
@@ -79,7 +99,7 @@
         </button>
 
         <!-- button audio-start -->
-        <audio loop id="sound-aud" src="/assets/audio/bell.wav" preload="auto"></audio>
+        <audio loop id="sound-aud" src="/assets/audio/katar.wav" preload="auto"></audio>
         <button id="sound-btn" onclick="document.getElementById('sound-aud').play();">Audio</button>
         <!-- button audio-end -->
 
@@ -91,37 +111,48 @@
                 <div class="slider">
                     <div class="slides">
 
-                        <!-- NEW HERITAGE -->
+                        <!-- INDIAN HERITAGE -->
 
-                        <button id="sitar-anno" class="slide"
-                            onclick="switchSrc(this, 'bowandarrow');changecontext('Bow & Arrow','NEW HR')"
-                            style="background-image: url('./assets/images/bowandarrow.png">
+                        <button class="slide weapon " onclick="switchSrc(this, 'katar');changecontext('Weapon - Katar','INDIAN HERITAGE')"
+                            style="background-image: url('./assets/images/katar.png');">
                         </button>
 
-                        <button class=" slide"
-                            onclick="switchSrc(this, 'harappanArtifact');changecontext('Harappan Artifact','NEW HR')"
-                            style="background-image: url('./assets/images/harappanArtifact.png');">
+                        <button class="slide weapon" onclick="switchSrc(this, 'dandpatta');changecontext('Weapon - Dandpatta','INDIAN HERITAGE')"
+                            style="background-image: url('./assets/images/dandpatta.png');">
+                        </button> 
+
+                        <button id="bnr" class="slide weapon"
+                            onclick="switchSrc(this, 'bowandarrow');changecontext('Weapon - Bow & Arrow','INDIAN HERITAGE ')"
+                            >
+                        </button>
+                        
+                        <button id="robot-button" class="slide weapon "
+                            onclick="switchSrc(this, 'trishul');changecontext('Weapon - Trishul','INDIAN HERITAGE');"
+                            style="background-image: url('./assets/images/trishul.png')">
                         </button>
 
-                        <button id="robot-button" class="slide"
-                            onclick="switchSrc(this, 'laxmi');changecontext('Laxmi','NEW HR')"
+                        <button id="robot-button" class="slide god"
+                            onclick="switchSrc(this, 'laxmi');changecontext('Goddess of Wealth - Laxmi','INDIAN HERITAGE')"
                             style="background-image: url('./assets/images/laxmi.png');">
                         </button>
 
-                        <button id="sitar-anno" class="slide"
-                            onclick="switchSrc(this, 'nandi');changecontext('Nandi','NEW HR')"
-                            style="background-image: url('./assets/images/nandi.png');">
+                        <button id="sitar-anno" class="slide god"
+                            onclick="switchSrc(this, 'nandi');changecontext('Guardian deity of Kailash - Nandi','INDIAN HERITAGE')"
+                            style="background-image: url('./assets/images/ox.png');">
                         </button>
 
-                        <!-- <button class="slide music"
-                            onclick="switchSrc(this, 'bell');changecontext('Bell','Musical  Instrument')"
-                            style="background-image: url('./assets/images/bell.png');">
-                        </button>
 
-                        <button id="robot-button" class="slide music"
-                            onclick="switchSrc(this, 'flute');changecontext('Flute','Musical  Instrument')"
+                        <button id="robot-button" class="slide god" onclick="switchSrc(this, 'vishnu');changecontext('The Preserver - Vishnu','INDIAN HERITAGE')"
+                            style="background-image: url('./assets/images/vishnu.png');">
+                        </button>
+                        
+                        <button id="robot-button" class="slide " onclick="switchSrc(this, 'yudistira');changecontext('Yudhishthir','INDIAN HERITAGE')"
                             style="background-image: url('./assets/images/flute.png');">
-                        </button> -->
+                        </button>
+
+                        <button class=" slide" onclick="switchSrc(this, 'harappanArtifact');changecontext('Harappan Artifact','NEW HR')"
+                            style="background-image: url('./assets/images/harappanArtifact.png');">
+                        </button>
 
 
                         <!-- MUSIC INSTRUMENTS -->
@@ -288,9 +319,10 @@
     </script>
     <script>
 
-        function changecontext(name, type) {
+        function changecontext(name, type,info) {
             document.getElementById("objname").innerHTML = name;
             document.getElementById("objtype").innerHTML = type;
+            document.getElementById()
             if (type === "Musical  Instrument") {
                 document.getElementById("mv").style.background = "#cbefbb";
             }
@@ -306,7 +338,17 @@
 
         }
     </script>
-
+    <!-- info bbutton script -->
+    <script>
+        function on() {
+          document.getElementById("infobox").style.display = "block";
+        }
+        
+        function off() {
+          document.getElementById("infobox").style.display = "none";
+        }
+        
+        </script>
 
 
 
